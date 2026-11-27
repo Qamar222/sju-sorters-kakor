@@ -1,0 +1,304 @@
+
+/*
+   SJU SORTERS KAKOR
+   Designidé: Ett personligt digitalt kakmagasin
+   Inspiration: Gamla svenska kokböcker och receptsamlingar.
+*/
+
+/* Grundinställningar för sidan */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5efe3;
+    color: #40332c;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Rubrikerna har en mörk rödbrun färg */
+h1, h2, h3 {
+    color: #783b43;
+    font-family: Georgia, serif;
+}
+
+h1 {
+    font-size: 56px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 21px;
+}
+
+/* Sidhuvudet med titel och introduktionsbild */
+header {
+    background-color: #e9d8c2;
+    text-align: center;
+    padding: 45px 25px 35px;
+    border-bottom: 2px solid #b98d78;
+}
+
+header h1 {
+    margin: 10px 0 25px;
+    text-transform: uppercase;
+}
+
+header img {
+    display: block;
+    width: 70%;
+    max-width: 620px;
+    height: auto;
+    margin: 20px auto;
+    border: 7px solid #fffaf1;
+    box-shadow: 4px 5px 0 #c6a88d;
+}
+
+/* Texten som presenterar fikatraditionen */
+header figcaption {
+    color: #806b5e;
+    font-size: 14px;
+    font-style: italic;
+}
+
+header p {
+    max-width: 750px;
+    margin: 25px auto 10px;
+}
+
+/* Innehållsmenyn med länkar till alla recept */
+nav {
+    position: relative;
+    background-color: #f5efe3;
+    padding: 25px 160px 30px 15px;
+    text-align: center;
+    border-bottom: 1px solid #cbb49d;
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px;
+    height: 110px;
+    background-image: url("bilder/bakning-unsplash.JPG");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    pointer-events: none;
+}
+
+nav h2 {
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 18px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: inline-block;
+    color: #783b43;
+    background-color: #fffaf1;
+    border: 1px solid #cbb49d;
+    padding: 7px 15px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #783b43;
+    color: #fffaf1;
+}
+
+/* Huvudinnehållet och introduktionen */
+main {
+    max-width: 1050px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+main > h2:first-child {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+main p {
+    max-width: 760px;
+    margin: 15px auto 25px;
+}
+
+/* Receptens olika delar får en gemensam stil */
+section {
+    background-color: #fffaf3;
+    margin: 40px 0;
+    padding: 30px 35px;
+    border-top: 1px solid #dfcbb5;
+    border-bottom: 1px solid #dfcbb5;
+    border-left: 4px solid #b77b70;
+    box-shadow: 0 4px 12px rgba(80, 48, 35, 0.06);
+}
+
+section h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #d8bca5;
+}
+
+section h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* Bilderna och deras bildtexter */
+figure {
+    margin: 25px auto;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 0 auto;
+    border: 6px solid #f0dfc9;
+}
+
+figcaption {
+    color: #806b5e;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 8px;
+}
+
+/* Text och listor i recepten */
+section p {
+    max-width: 780px;
+    margin: 15px 0;
+}
+
+ul, ol {
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+li {
+    padding-left: 5px;
+    margin-bottom: 7px;
+}
+
+section a {
+    color: #783b43;
+    text-decoration: underline;
+}
+
+section a:hover {
+    color: #b77b70;
+}
+
+/* Sidfoten längst ner på sidan */
+footer {
+    background-color: #e9d8c2;
+    color: #654d40;
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 55px;
+    border-top: 2px solid #b98d78;
+}
+
+footer p {
+    margin: 5px;
+    font-size: 16px;
+}
+
+/* Anpassning så att sidan fungerar på mobiltelefoner */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 36px;
+    }
+
+    header img {
+        width: 95%;
+    }
+
+    nav {
+        padding: 20px 65px 20px 10px;
+    }
+
+    nav::after {
+        width: 45px;
+        height: 45px;
+        right: 10px;
+    }
+
+    nav ul {
+        gap: 7px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 12px;
+    }
+
+    main > h2:first-child {
+        font-size: 29px;
+    }
+
+    section {
+        margin: 25px 0;
+        padding: 20px 17px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    section h3 {
+        font-size: 19px;
+    }
+
+    figure img {
+        width: 100%;
+    }
+}
